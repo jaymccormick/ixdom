@@ -4,10 +4,11 @@
 const myButton = document.getElementById('myButton');
 const textInput = document.getElementById('changeColor');
 
-// selecting by tag: multiple elements returned as an array
+// selecting by tag or class: multiple elements returned as an array
 const heading = document.getElementsByTagName('h1')[0];
 const myParagraph = document.getElementsByTagName('p');
 const myList = document.getElementsByTagName('li');
+const redThing = document.getElementsByClassName('red-thing');
 
 heading.addEventListener('click', () => {
   heading.style.color = 'grey';
@@ -18,7 +19,19 @@ myButton.addEventListener('click', () => {
 });
 
 for (let i = 0; i < myList.length; i++ ){
+
   myList[i].addEventListener('click', () => {
-    myList[i].style.color = "#4caf50";
-  })
+    if (myList[i].className === "error-not-purple"){
+    myList[i].style.color = "red";
+    } else {
+      myList[i].style.color = "#4caf50";
+    }
+  });
+}
+
+for (let i = 0; i < redThing.length; i++ ){
+
+  redThing[i].addEventListener('click', () => {
+      redThing[i].style.color = 'red';
+  });
 }
