@@ -26,6 +26,7 @@ const makeThingUL = document.querySelector('ul.make-thing');
 makeThingButton.addEventListener('click', () => {
   let li = document.createElement('li');
   li.textContent = makeThingInput.value;
+  makeThingInput.value = '';
   makeThingUL.appendChild(li);
 });
 
