@@ -16,6 +16,19 @@ const para = document.querySelector('p.description');
 const button = document.querySelector('button.description');
 const ul = document.querySelector('ul.add-item');
 
+const hideButton = document.querySelector('button.hide-button');
+const hideList = document.querySelector('.hide-list');
+
+hideButton.addEventListener('click', () => {
+  if (hideList.style.display == 'none'){
+    hideList.style.display = 'block';
+    hideButton.textContent = 'show';
+  } else {
+  hideList.style.display = 'none';
+  hideButton.textContent = 'hide';
+  }
+});
+
 button.addEventListener('click', () => {
   para.textContent = input.value + "!";
   // para.title = input.value;
