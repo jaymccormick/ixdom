@@ -14,10 +14,11 @@ const purpleThing = document.querySelectorAll('.purple-thing');
 const input = document.querySelector('input.description');
 const para = document.querySelector('p.description');
 const button = document.querySelector('button.description');
+const ul = document.querySelector('ul.add-item');
 
 button.addEventListener('click', () => {
-  console.log('worked');
   para.textContent = input.value + "!";
+  ul.innerHTML += "<li>" + input.value + "</li>";
   input.value = "";
 });
 
