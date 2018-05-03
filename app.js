@@ -22,12 +22,26 @@ const hideList = document.querySelector('.hide-list');
 const makeThingInput = document.querySelector('input.make-thing');
 const makeThingButton = document.querySelector('button.make-thing');
 const makeThingUL = document.querySelector('ul.make-thing');
+const removeThingButton = document.querySelector('button.remove-thing');
+const anotherRemover = document.querySelector('button.another-remover');
 
 makeThingButton.addEventListener('click', () => {
   let li = document.createElement('li');
   li.textContent = makeThingInput.value;
   makeThingInput.value = '';
   makeThingUL.appendChild(li);
+});
+
+removeThingButton.addEventListener('click', () => {
+  let items = document.querySelectorAll('ul.make-thing li');
+  let itemsLength = items.length - 1;
+  makeThingUL.removeChild(items[itemsLength]);
+});
+
+anotherRemover.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[2];
+  let li = document.querySelector('ul.make-thing li:last-child');
+  ul.removeChild(li);
 });
 
 hideButton.addEventListener('click', () => {
