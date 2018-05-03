@@ -19,6 +19,16 @@ const ul = document.querySelector('ul.add-item');
 const hideButton = document.querySelector('button.hide-button');
 const hideList = document.querySelector('.hide-list');
 
+const makeThingInput = document.querySelector('input.make-thing');
+const makeThingButton = document.querySelector('button.make-thing');
+const makeThingUL = document.querySelector('ul.make-thing');
+
+makeThingButton.addEventListener('click', () => {
+  let li = document.createElement('li');
+  li.textContent = makeThingInput.value;
+  makeThingUL.appendChild(li);
+});
+
 hideButton.addEventListener('click', () => {
   if (hideList.style.display == 'none'){
     hideList.style.display = 'block';
