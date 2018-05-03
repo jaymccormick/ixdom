@@ -11,6 +11,16 @@ const myList = document.querySelectorAll('li');
 const redThing = document.getElementsByClassName('red-thing');
 const purpleThing = document.querySelectorAll('.purple-thing');
 
+const input = document.querySelector('input.description');
+const para = document.querySelector('p.description');
+const button = document.querySelector('button.description');
+
+button.addEventListener('click', () => {
+  console.log('worked');
+  para.textContent = input.value + "!";
+  input.value = "";
+});
+
 heading.addEventListener('click', () => {
   heading.style.color = 'grey';
 });
