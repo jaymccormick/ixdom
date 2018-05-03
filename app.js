@@ -35,3 +35,11 @@ for (let i = 0; i < redThing.length; i++ ){
       redThing[i].style.color = 'red';
   });
 }
+
+const evens = document.querySelectorAll('li:nth-child(even)');
+
+for (let i = 0; i < evens.length; i++){
+  evens[i].addEventListener('click', () => {
+      evens[i].style.backgroundColor = "#f7f7f7";
+  });
+}
