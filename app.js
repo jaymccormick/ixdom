@@ -18,6 +18,7 @@ const ul = document.querySelector('ul.add-item');
 
 button.addEventListener('click', () => {
   para.textContent = input.value + "!";
+  // para.title = input.value;
   ul.innerHTML += "<li>" + input.value + "</li>";
   input.value = "";
 });
